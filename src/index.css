@@ -1153,33 +1153,7 @@ img {
     color: rgba(255, 255, 255, 1);
 }
 
-.product-description {
-    margin-top: 20px;
-}
 
-.product-description h4 {
-    font-weight: 400;
-    color: #9f9f9f;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.product-description p {
-    font-size: 15px;
-    margin: 0;
-}
-
-.product-description .add-to-cart-btn {
-    margin-top: 50px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #ff084e;
-    display: block;
-}
-
-.product-description .add-to-cart-btn:hover {
-    color: #2a2a2a;
-}
 
 /* -------------------
 :: 12.0 Offer Area CSS
