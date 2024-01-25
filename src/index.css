@@ -2143,38 +2143,18 @@ img {
 
 
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 28px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
+  bottom: 10px;
   text-align: center;
   line-height: 20px;
   font-size: 1px;
   color: #ff084e !important;
   opacity: 1;
   background: rgba(0, 0, 0, 0.2);
+  transform : translateY(250%)
 }
 
 .swiper-pagination-bullet-active {
