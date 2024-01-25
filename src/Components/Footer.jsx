@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer p-10  ">
         <aside>
           <svg
             width="50"
@@ -42,11 +42,11 @@ export const Footer = () => {
         </nav>
         <form>
           <h6 className="footer-title">Newsletter</h6>
-          <fieldset className="form-control w-80">
+          <fieldset className="form-control lg:w-80">
             <label className="label">
               <span className="label-text">Enter your email address</span>
             </label>
-            <div className="join">
+            <div className="lg:join">
               <input
                 type="text"
                 placeholder="username@site.com"
@@ -58,7 +58,7 @@ export const Footer = () => {
         </form>
 
       </footer>
-      <div className="footer footer-center p-4 bg-base-300 text-base-content">
+      <div className="footer footer-center p-4  ">
     <aside>
       <p>Copyright © 2024 - All right reserved by Dotpot iT </p>
     </aside>
