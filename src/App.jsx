@@ -5,9 +5,9 @@ import { Footer } from "./Components/Footer";
 function App() {
   return (
     <div id="wrapper">
-      <Header />
-      <Outlet />
-      <Footer />
+     <Header/>
+     <Outlet/>
+    
     </div>
   );
 }
