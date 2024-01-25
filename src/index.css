@@ -907,14 +907,6 @@ img {
     text-decoration: underline;
 }
 
-.quickview_body .quantity > input {
-    -moz-appearance: textfield;
-    border: 1px solid #f6f6f6;
-    height: 35px;
-    text-align: center;
-    width: 40px;
-    font-size: 13px;
-}
 
 .quickview_body .quantity {
     -webkit-box-align: center;
@@ -1326,100 +1318,7 @@ img {
     border-color: #ff084e;
 }
 
-/* ----------------------
-:: 14.0 Footer Area CSS
----------------------- */
 
-.footer_area {
-    background-color: #fff;
-    border-top: 2px solid #e5e5e5;
-    padding: 100px 0 50px;
-}
-
-.footer_content > p {
-    font-size: 14px;
-}
-
-.footer_content > p:first-child {
-    margin-bottom: 30px;
-}
-
-.footer_social_area > a {
-    display: inline-block;
-    font-size: 26px;
-    padding: 0 30px;
-}
-
-.footer_social_area > a:hover {
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-    color: #ff084e;
-}
-
-.footer_widget_menu a {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    font-weight: 600;
-}
-
-.footer_widget_menu a:hover {
-    margin-left: 5px;
-}
-
-.footer_widget_menu a i {
-    padding-right: 5px;
-}
-
-.subscribtion_form {
-    position: relative;
-    z-index: 1;
-}
-
-.subscribtion_form .mail {
-    border: none;
-    border-radius: 0;
-    font-size: 12px;
-    height: 50px;
-    padding: 5px 15px;
-    width: 100%;
-    background-color: #f0eded;
-    color: #929191;
-    font-style: italic;
-}
-
-.subscribtion_form .submit {
-    background-color: #3a3a3a;
-    border: none;
-    border-radius: 0;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    height: 50px;
-    position: absolute;
-    right: 0;
-    text-transform: uppercase;
-    top: 0;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    padding: 0 30px;
-    font-weight: 700;
-}
-
-.subscribtion_form .submit:hover {
-    background-color: #ff084e;
-    color: #fff;
-}
-
-.copywrite_text > p {
-    color: #9f9f9f;
-    font-size: 14px;
-    margin-top: 30px;
-    display: block;
-}
 
 /* ------------------------
 :: 15.0 Breadcumb Area CSS
@@ -1465,11 +1364,7 @@ img {
     border-radius: 50%;
 }
 
-.custom-control-input:checked ~ .custom-control-indicator {
-    background-color: #00bcd4;
-    color: #fff;
-    box-shadow: none !important;
-}
+
 
 .widget-title {
     font-size: 14px;
@@ -1970,14 +1865,7 @@ img {
     z-index: 1;
 }
 
-.coupon-code-area form > input {
-    width: 100%;
-    height: 52px;
-    border: none;
-    background-color: #f4f2f8;
-    padding: 0 30px;
-    font-size: 12px;
-}
+
 
 .coupon-code-area form > button {
     width: 120px;
@@ -2160,13 +2048,7 @@ img {
         color: #fff;
         line-height: 28px;
     }
-    #karl-navbar {
-        padding: 15px;
-        background-color: #f4f2f8;
-    }
-    .single_footer_area {
-        margin-bottom: 100px;
-    }
+   
     .welcome_slide_text > h2,
     .single_catagory_area h2 {
         font-size: 50px;
@@ -2217,16 +2099,7 @@ img {
         background-color: #f4f2f8;
         margin-bottom: 30px;
     }
-    .single_footer_area {
-        margin-bottom: 100px;
-    }
-    .footer_social_area > a {
-        font-size: 18px;
-        padding: 0 15px;
-    }
-    .subscribtion_form .submit {
-        padding: 0 20px;
-    }
+    
     .top-discount-area .single-discount-area {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 33.333333%;
