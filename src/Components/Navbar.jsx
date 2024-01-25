@@ -7,6 +7,7 @@ import {
   MdViewList,
   MdWhatsapp,
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -31,12 +32,15 @@ function Navbar() {
               <li>
                 <details>
                   <summary>PAGES</summary>
-                  <ul className="p-2">
+                  <ul className="p-2 w-[250px]">
                     <li>
-                      <a>Submenu 1</a>
+                      <Link to="/cart">Cart</Link>
                     </li>
                     <li>
-                      <a>Submenu 2</a>
+                    <Link to="/productDetails">Product Details</Link>
+                    </li>
+                    <li>
+                    <Link to="/checkout">Check-Out</Link>
                     </li>
                   </ul>
                 </details>
@@ -61,13 +65,16 @@ function Navbar() {
             <li>
               <details>
                 <summary>PAGES</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
+                <ul className="p-2 w-[250px]">
+                <li>
+                      <Link to="/cart">Cart</Link>
+                    </li>
+                    <li>
+                    <Link to="/productDetails">Product Details</Link>
+                    </li>
+                    <li>
+                      <Link to="/checkout">Check-Out</Link>
+                    </li>
                 </ul>
               </details>
             </li>

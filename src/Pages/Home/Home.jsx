@@ -4,7 +4,6 @@ import Discount from "../../Components/Discount";
 import TopCategory from "../../Components/TopCategory";
 import NewArrivals from "../../Components/NewArrivals";
 import Banner from "../../Components/Banner";
-import Cart from "../Cart";
 
 function Home() {
   return (
@@ -14,7 +13,6 @@ function Home() {
       <NewArrivals />
       <Discount />
       <Testimonials />
-      <Cart />
     </div>
   );
 }
