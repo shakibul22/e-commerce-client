@@ -14,7 +14,7 @@ function TabComponent({ label, isActive, onClick }) {
 
 const ProductGalleryItem = ({ image, name, price }) => (
   <div className=" mb-8 sm:mb-0">
-    <div className="single_gallery_item wow fadeInUpBig">
+    <div className="single_gallery_item ">
       <div className="product-img">
         <img className="w-[20vh] h-[55vh]" src={image} alt={name} />
         <div className="product-quicview">
@@ -37,67 +37,50 @@ const NewArrivals = () => {
     {
       label: "ALL",
       products: [
-        { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$19.99" },
+        { name: "Product 3", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-1_ucqfqi.jpg", price: "$39.99" },
+        { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg", price: "$19.99" },
+        { name: "Product 6", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-2_im20vg.jpg", price: "$69.99" },
         { name: "Product 2", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$29.99" },
-        { name: "Product 3", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$39.99" },
-        { name: "Product 4", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$49.99" },
-        { name: "Product 5", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$59.99" },
-        { name: "Product 6", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$69.99" },
+        { name: "Product 5", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-5_cl96ka.jpg", price: "$59.99" },
+        { name: "Product 4", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-6_oo3hya.jpg", price: "$49.99" },
       ],
     },
     {
       label: "WOMAN",
       products: [
-        { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$19.99" },
+        { name: "Product 3", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-1_ucqfqi.jpg", price: "$39.99" },
+        { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg", price: "$19.99" },
+        { name: "Product 6", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-2_im20vg.jpg", price: "$69.99" },
         { name: "Product 2", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$29.99" },
-        { name: "Product 3", image: "image3.jpg", price: "$39.99" },
-        { name: "Product 4", image: "image4.jpg", price: "$49.99" },
-        { name: "Product 5", image: "image5.jpg", price: "$59.99" },
-        { name: "Product 6", image: "image6.jpg", price: "$69.99" },
+        { name: "Product 5", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-5_cl96ka.jpg", price: "$59.99" },
       ],
     },
     {
       label: "MAN",
       products: [
-        { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$19.99" },
-        { name: "Product 2", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$29.99" },
-        { name: "Product 3", image: "image3.jpg", price: "$39.99" },
-        { name: "Product 4", image: "image4.jpg", price: "$49.99" },
-        { name: "Product 5", image: "image5.jpg", price: "$59.99" },
-        { name: "Product 6", image: "image6.jpg", price: "$69.99" },
+        { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-6_oo3hya.jpg", price: "$19.99" },
+       
       ],
     },
     {
       label: "ACCESSORIES",
       products: [
         { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$19.99" },
-        { name: "Product 2", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$29.99" },
-        { name: "Product 3", image: "image3.jpg", price: "$39.99" },
-        { name: "Product 4", image: "image4.jpg", price: "$49.99" },
-        { name: "Product 5", image: "image5.jpg", price: "$59.99" },
-        { name: "Product 6", image: "image6.jpg", price: "$69.99" },
+    
       ],
     },
     {
       label: "SHOES",
       products: [
         { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$19.99" },
-        { name: "Product 2", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$29.99" },
-        { name: "Product 3", image: "image3.jpg", price: "$39.99" },
-        { name: "Product 4", image: "image4.jpg", price: "$49.99" },
-        { name: "Product 5", image: "image5.jpg", price: "$59.99" },
-        { name: "Product 6", image: "image6.jpg", price: "$69.99" },
+       
       ],
     },
     {
       label: "KIDS",
       products: [
         { name: "Product 1", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$19.99" },
-        { name: "Product 2", image: "https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706104266/cutegirl_jow5dj.jpg", price: "$29.99" },
-        { name: "Product 3", image: "image3.jpg", price: "$39.99" },
-        { name: "Product 4", image: "image4.jpg", price: "$49.99" },
-        { name: "Product 5", image: "image5.jpg", price: "$59.99" },
-        { name: "Product 6", image: "image6.jpg", price: "$69.99" },
+     
       ],
     },
     // Include similar data for other tabs
@@ -108,14 +91,14 @@ const NewArrivals = () => {
   };
 
   return (
-    <section className="new_arrivals_area">
+    <section className="new_arrivals_area mt-16">
       <div className="container mx-auto">
         <div className="section_heading text-center">
           <h2>New Arrivals</h2>
         </div>
 
         <div>
-          <div role="tablist" className="tabs tabs-lifted  max-w-2xl mx-auto mb-24">
+          <div role="tablist" className="tabs tabs-lifted max-w-4xl  mx-auto mb-24">
             {tabsData.map((tab, index) => (
               <TabComponent
                 key={index}
@@ -126,7 +109,7 @@ const NewArrivals = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 max-w-7xl mx-auto ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-7xl mx-auto ">
             {tabsData[activeTab].products.map((product, index) => (
               <ProductGalleryItem key={index} image={product.image} name={product.name} price={product.price} />
             ))}
