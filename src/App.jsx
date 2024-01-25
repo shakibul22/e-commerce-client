@@ -7,6 +7,7 @@ function App() {
     <div id="wrapper">
      <Header/>
      <Outlet/>
+     <Footer />
     
     </div>
   );
