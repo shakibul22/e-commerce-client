@@ -1,10 +1,36 @@
-import React from 'react'
 
+import { Carousel } from "react-responsive-carousel";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { FaRegStar } from "react-icons/fa";
+import { useState } from "react";
+import RelatedProducts from "../Components/RelatedProducts";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 function ProductDetails() {
+    const [rating, setRating] = useState(0);
+
+    const handleClick = (newRating) => {
+      setRating(newRating === rating ? 0 : newRating);
+    };
+  
+
+    const images = [
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-1_ucqfqi.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-1_ucqfqi.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+        'https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg',
+    ]
+
+    
   return (
     <div>
-        <div className="breadcumb_area">
-            <div className="container">
+        <div className="px-2 lg:px-[220px]"> 
+           
                 <div className="flex flex-row   ">
                     <div className="flex flex-col">
                         <ol className="breadcrumb flex flex-row">
@@ -17,52 +43,29 @@ function ProductDetails() {
                 </div>
                 <section className="">
           
-                <div className="flex flex-col lg:flex-row">
+                <div className="flex flex-col-reverse">
+                    <RelatedProducts/>
+             
 
-                    <div className="flex flex-col ">
-                        <div className="single_product_thumb">
-                            <div id="product_details_slider" className="carousel slide" data-ride="carousel">
-
-                            <ol className="carousel-indicators">
-    <li className="" data-target="#product_details_slider" data-slide-to="0" style={{backgroundImage: 'url(https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg)'}}>
-    </li>
-    <li data-target="#product_details_slider" data-slide-to="1" style={{backgroundImage: 'url(https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg)'}} className="">
-    </li>
-    <li data-target="#product_details_slider" data-slide-to="2" style={{backgroundImage: 'url(img/product-img/product-3.jpg)'}} className="active">
-    </li>
-    <li data-target="#product_details_slider" data-slide-to="3" style={{backgroundImage: 'url(img/product-img/product-4.jpg)'}} className="">
-    </li>
-</ol>
-
-
-                                <div className="carousel-inner">
-                                    <div className="carousel-item">
-                                        <a className="gallery_img" href="">
-                                        <img className="d-block w-100" src="https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg" alt="First slide"/>
-                                    </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a className="gallery_img" href="">
-                                        <img className="d-block w-100" src="https://res.cloudinary.com/dzqxgr4lr/image/upload/v1706181849/product-3_ge8nam.jpg" alt="Second slide"/>
-                                    </a>
-                                    </div>
-                                    <div className="carousel-item active">
-                                        <a className="gallery_img" href="img/product-img/product-3.jpg">
-                                        <img className="d-block w-100" src="img/product-img/product-3.jpg" alt="Third slide"/>
-                                    </a>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <a className="gallery_img" href="img/product-img/product-4.jpg">
-                                        <img className="d-block w-100" src="img/product-img/product-4.jpg" alt="Fourth slide"/>
-                                    </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="flex flex-col lg:flex-row  justify-between gap-5">
+                  
+                     <div className="w-full lg:w-[55vh] h-auto ">
+                     <Carousel autoPlay={true} interval={3000} infiniteLoop={true}>
+                {Array.isArray(images) &&
+                  images.map((image, index) => (
+                    <div key={index}>
+                      <img
+                        className="  "
+                        src={image}
+                        alt={`Slide ${index + 1}`}
+                      />
                     </div>
-
-                    <div className="flex flex-col col-md-6">
-                        <div className="single_product_desc">
+                  ))}
+              </Carousel>
+                     </div>
+                     
+  
+                        <div className="single_product_desc w-full">
 
                             <h4 className="title"><a href="#">Long Yellow Dress</a></h4>
 
@@ -70,16 +73,21 @@ function ProductDetails() {
 
                             <p className="available">Available: <span className="text-muted">In Stock</span></p>
 
-                            <div className="single_product_ratings mb-15">
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                                <i className="fa fa-star" aria-hidden="true"></i>
-                                <i className="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
+                            <div className="flex pb-4">
+      {[1, 2, 3, 4, 5].map((index) => (
+        <FaRegStar
+          key={index}
+          className={`text-2xl text-yellow-500 cursor-pointer ${
+            index <= rating ? 'text-yellow-500' : 'text-gray-300'
+          }`}
+          aria-hidden="true"
+          onClick={() => handleClick(index)}
+        />
+      ))}
+    </div>
 
-                            <div className="widget size mb-50">
-                                <h6 className="widget-title">Size</h6>
+                            <div className="widget size mb-5 lg:mb-50">
+                                <h6 className="widget-title mb-2">Size</h6>
                                 <div className="widget-desc">
                                     <ul>
                                         <li><a href="#">32</a></li>
@@ -93,11 +101,11 @@ function ProductDetails() {
                             </div>
 
                         
-                            <form className="cart clearfix mb-50 d-flex" method="post">
+                            <form className="cart clearfix mb-5 lg:mb-50 d-flex" method="post">
                                 <div className="quantity">
-                                    <span className="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;"><i className="fa fa-minus" aria-hidden="true"></i></span>
+                                    <span className="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;">  <AiOutlineMinus />{' '}</span>
                                     <input type="number" className="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1"/>
-                                    <span className="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i className="fa fa-plus" aria-hidden="true"></i></span>
+                                    <span className="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;">  <AiOutlinePlus />{' '}</span>
                                 </div>
                                 <button type="submit" name="addtocart" value="5" className="btn cart-submit d-block">Add to cart</button>
                             </form>
@@ -151,7 +159,7 @@ function ProductDetails() {
                 </div>
        
         </section>
-            </div>
+           
         </div>
     </div>
   )
