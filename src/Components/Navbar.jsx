@@ -27,7 +27,7 @@ function Navbar() {
               className="menu menu-sm dropdown-content text-black font-bold mt-3 z-[1] p-2   rounded-box w-52"
             >
               <li>
-                <a>HOME</a>
+                <a href="/">HOME</a>
               </li>
               <li>
                 <details>
@@ -60,12 +60,15 @@ function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>HOME</a>
+              <a href="/">HOME</a>
             </li>
             <li>
               <details>
                 <summary>PAGES</summary>
                 <ul className="p-2 w-[250px]">
+                <li>
+                      <Link to="/shop">Shop</Link>
+                    </li>
                 <li>
                       <Link to="/cart">Cart</Link>
                     </li>
