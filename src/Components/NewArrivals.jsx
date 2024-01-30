@@ -1,35 +1,45 @@
+// Import React and useState
 import React, { useState } from "react";
+// Import AiOutlinePlus icon
 import { AiOutlinePlus } from "react-icons/ai";
-function TabComponent({ label, isActive, onClick }) {
-    return (
-      <a
-        role="tab"
-        className={`tab ${isActive ? "tab-active [--tab-bg:red] [--tab-border-color:red] text-white" : ""}`}
-        onClick={onClick}
-      >
-        {label}
-      </a>
-    );
-  }
 
+// TabComponent component
+function TabComponent({ label, isActive, onClick }) {
+  return (
+    <a
+      role="tab"
+      className={`tab ${isActive ? "tab-active [--tab-bg:red] [--tab-border-color:red] text-white" : ""}`}
+      onClick={onClick}
+    >
+      {label}
+    </a>
+  );
+}
+
+// ProductGalleryItem component
 const ProductGalleryItem = ({ image, name, price }) => (
-  <div className=" mb-8 sm:mb-0">
-    <div className="single_gallery_item ">
+  <div className="mb-8 sm:mb-0">
+    <div className="single_gallery_item">
       <div className="product-img">
         <img className="w-[20vh] h-[55vh]" src={image} alt={name} />
         <div className="product-quicview">
-          <a href="#" data-toggle="modal" className="flex justify-center items-center" data-target="#quickview"><AiOutlinePlus /> </a>
+          <a href="#" data-toggle="modal" className="flex justify-center items-center" data-target="#quickview">
+            <AiOutlinePlus />
+          </a>
         </div>
       </div>
-      <div className="product-description  mt-4">
+      <div className="product-description mt-4">
         <p className="text-gray-700">{price}</p>
         <p className="font-bold">{name}</p>
-        <a href="#" className=" text-red-400   py-2 rounded-full inline-block mt-6">ADD TO CART</a>
+        <a href="#" className="text-red-400 py-2 rounded-full inline-block mt-6">
+          ADD TO CART
+        </a>
       </div>
     </div>
   </div>
 );
 
+// NewArrivals component
 const NewArrivals = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -89,7 +99,6 @@ const NewArrivals = () => {
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
-
   return (
     <section className="new_arrivals_area mt-16">
       <div className="container mx-auto">
@@ -98,7 +107,7 @@ const NewArrivals = () => {
         </div>
 
         <div>
-          <div role="tablist" className="tabs tabs-lifted max-w-4xl  mx-auto mb-24">
+          <div role="tablist" className="tabs tabs-lifted flex flex-wrap  lg:flex-row justify-center  mb-24">
             {tabsData.map((tab, index) => (
               <TabComponent
                 key={index}
@@ -108,8 +117,7 @@ const NewArrivals = () => {
               />
             ))}
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-7xl mx-auto ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-7xl mx-auto">
             {tabsData[activeTab].products.map((product, index) => (
               <ProductGalleryItem key={index} image={product.image} name={product.name} price={product.price} />
             ))}
