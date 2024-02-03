@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdFastForward, MdOutlineFacebook, MdViewList, MdWhatsapp } from 'react-icons/md'
+
 
 function SecondNavbar() {
   return (

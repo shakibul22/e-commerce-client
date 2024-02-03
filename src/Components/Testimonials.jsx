@@ -41,8 +41,8 @@ function Testimonials() {
   ];
 
   return (
-    <div className="px-2 md:px-[100px] lg:px-[180px] xl:px-[520px]">
-      <div className="text-5xl text-center py-6 pt-16">
+    <div className="px-2 md:px-[100px] lg:px-[180px] xl:px-[520px] ">
+      <div className="text-3xl lg:text-5xl text-center py-6 pt-16">
         <h1>Testimonials</h1>
         <div  className=" flex justify-center pt-4 pb-4 text-[#FF084E] "><FaQuoteLeft /></div>
         
@@ -57,7 +57,7 @@ function Testimonials() {
           <SwiperSlide key={index}>
             <div>
               <div>
-                <div className="text-xl text-center pb-3">
+                <div className=" text-md lg:text-xl text-center pb-3">
                   <p>{testimonial.quote}</p>
                 </div>
                 <div className=" flex flex-row items-center gap-3 justify-center ">
@@ -75,7 +75,7 @@ function Testimonials() {
             </div>
           </SwiperSlide>
         ))}
-        <div className="swiper-pagination"></div>
+        <div className="swiper-pagination-bullet"></div>
       </Swiper>
     </div>
   );
