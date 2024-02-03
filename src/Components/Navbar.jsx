@@ -93,7 +93,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="p-3 bg-[#ff084e] text-white">+0880193463748</a>
+          <a className="p-3 bg-btnbg text-white">+0880193463748</a>
         </div>
       </div>
     </header>

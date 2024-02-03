@@ -18,10 +18,10 @@ function TabComponent({ label, isActive, onClick }) {
 
 // ProductGalleryItem component
 const ProductGalleryItem = ({ image, name, price }) => (
-  <div className="mb-8 sm:mb-0">
+  <div className="mb-2 sm:mb-0">
     <div className="single_gallery_item">
       <div className="product-img">
-        <img className="w-[20vh] h-[55vh]" src={image} alt={name} />
+        <img className="w-full lg:w-[20vh] h-[400px] lg:h-[55vh]" src={image} alt={name} />
         <div className="product-quicview">
           <a href="#" data-toggle="modal" className="flex justify-center items-center" data-target="#quickview">
             <AiOutlinePlus />
@@ -29,9 +29,9 @@ const ProductGalleryItem = ({ image, name, price }) => (
         </div>
       </div>
       <div className="product-description mt-4">
-        <p className="text-gray-700">{price}</p>
-        <p className="font-bold">{name}</p>
-        <a href="#" className="text-red-400 py-2 rounded-full inline-block mt-6">
+        <p className="">{price}</p>
+        <p className="font-bold ">{name}</p>
+        <a href="#" className="text-btnbg py-2 rounded-full inline-block mt-3">
           ADD TO CART
         </a>
       </div>
@@ -117,7 +117,7 @@ const NewArrivals = () => {
               />
             ))}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-3 max-w-7xl mx-auto">
             {tabsData[activeTab].products.map((product, index) => (
               <ProductGalleryItem key={index} image={product.image} name={product.name} price={product.price} />
             ))}
