@@ -4,8 +4,9 @@ import Discount from "../../Components/Discount";
 import TopCategory from "../../Components/TopCategory";
 import NewArrivals from "../../Components/NewArrivals";
 import Banner from "../../Components/Banner";
-import BestSellingProduct from "../../Components/BestSellingProduct";
-import SayHello from "../../Components/SayHello";
+import FlashSale from "../../Components/FlashSale";
+import FeaturedProducts from "../../Components/FeaturedProducts";
+import PopularProducts from "../../Components/PopularProducts";
 import PopupModal from "../../Components/PopupModal";
 
 function Home() {
@@ -14,11 +15,14 @@ function Home() {
     <div>
       <PopupModal />
       <Banner />
-      <TopCategory />
+      <TopCategory   />
       <NewArrivals />
       <BestSellingProduct />
+      <FlashSale/>
+      <FeaturedProducts/>
+      <PopularProducts/>
       <Discount />
-      <SayHello  />
+   
     
 
       <Testimonials />
