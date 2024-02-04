@@ -6,7 +6,7 @@ const PopupModal = () => {
     // Delay the opening of the modal by 1.5 seconds
     setTimeout(() => {
       // Open the modal after the delay
-      document.getElementById("my_modal_4").showModal();
+      document.getElementById("my_modal_2").showModal();
     }, 1500);
 
     // Cleanup function to close the modal when the component unmounts
@@ -20,13 +20,21 @@ const PopupModal = () => {
    const imageLink = '/cart' 
    const imageUrl = 'https://img.freepik.com/free-vector/special-offer-creative-sale-banner-design_1017-16284.jpg'
 
+{/* Open the modal using document.getElementById('ID').showModal() method */}
+{/* <button className="btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>open modal</button>
+<dialog id="my_modal_2" className="modal">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click outside to close</p>
+  </div>
 
+</dialog> */}
 
   return (
     <div className="modal-overlay text-center">
       {/* No need for the button to open the modal */}
-      <dialog id="my_modal_4" className="modal">
-        <div className="modal-box w-11/12 max-w-5xl">
+      <dialog id="my_modal_2" className="modal">
+        <div className="modal-box ">
           {/* Add an image tag here with the source of your image */}
           <Link to={imageLink} onClick={()=> document.getElementById("my_modal_4").close()} > 
           <img
@@ -36,13 +44,12 @@ const PopupModal = () => {
           />
            </Link>
 
-          <div className="modal-action">
-            <form method="dialog">
-              {/* if there is a button, it will close the modal */}
-              <button className="btn">Close</button>
-            </form>
-          </div>
-        </div>
+           </div>
+          <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+       
+       
       </dialog>
     </div>
   );
