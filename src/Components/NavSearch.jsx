@@ -3,13 +3,13 @@ import { FaSearch } from 'react-icons/fa';
 
 function NavSearch() {
   return (
-    <div>
+    <div className='navbar-center overflow-hidden mr-2 lg:ml-2'>
       <div className="relative text-gray-600">
         <input
           type="search"
           name="search"
           placeholder="Search"
-          className="bg-white h-10 px-5 pr-10 w-[25vh] md:w-[85vh] lg:w-[65vh] rounded-full text-sm focus:outline-none"
+          className="bg-white h-10 px-5 pr-10 w-[25vh] md:w-[85vh] lg:w-[90vh] rounded-full text-sm focus:outline-none"
         />
         <button type="submit" className="absolute right-0 top-0 mt-3 mr-4">
           <svg

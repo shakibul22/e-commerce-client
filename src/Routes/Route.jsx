@@ -9,6 +9,8 @@ import ProductDetails from "../Pages/ProductDetails";
 import Shop from "../Pages/Shop";
 import Login from "../Pages/Login";
 import Otp from "../Pages/Otp";
+import OrderTracker from "../Components/OrderTracker";
+import Signup from "../Components/Signup";
 
 export const router = createBrowserRouter([
   {
@@ -39,10 +41,18 @@ export const router = createBrowserRouter([
         path :"/login",
         element : <Login/>
       },
+      {
+        path :"/signup",
+        element : <Signup/>
+      },
 
       {
         path :"/otp",
         element : <Otp/>
+      },
+      {
+        path :"/orderTracker",
+        element : <OrderTracker/>
       }
     ]
   },
