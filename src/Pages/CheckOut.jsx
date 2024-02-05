@@ -2,7 +2,7 @@ import React from 'react'
 
 function CheckOut() {
   return (
-    <div className="px-2 lg:px-[420px] py-6 lg:py-16">
+    <div className="px-2 lg:px-[420px] py-6 lg:py-32">
   
         <div className="flex flex-col lg:flex-row justify-between gap-2 lg:gap-5">
 

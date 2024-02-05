@@ -44,7 +44,7 @@ function Shop() {
       ];
   return (
     <div>
-      <section className=" px-2 lg:px-[250px] mt-16">
+      <section className=" px-2 lg:px-[420px] py-6 lg:py-32">
         <div className="flex flex-col lg:flex-row justify-between gap-2 lg:gap-11">
           <div className="flex flex-row justify-between  gap-2">
             <div className="shop_sidebar_area">

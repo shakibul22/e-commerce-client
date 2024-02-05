@@ -29,7 +29,7 @@ function ProductDetails() {
     
   return (
     <div>
-        <div className="px-2 lg:px-[220px]"> 
+        <div className="px-2 lg:px-[420px] py-6 lg:py-32"> 
            
                 <div className="flex flex-row   ">
                     <div className="flex flex-col">
@@ -69,7 +69,7 @@ function ProductDetails() {
 
                             <h4 className="title"><a href="#">Long Yellow Dress</a></h4>
 
-                            <h4 className="price">$ 39.99</h4>
+                            <h4 className="price">৳ 39.99</h4>
 
                             <p className="available">Available: <span className="text-muted">In Stock</span></p>
 
