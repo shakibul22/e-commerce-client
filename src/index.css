@@ -1353,7 +1353,7 @@ img {
 
 .widget.size .widget-desc a:hover,
 .widget.size .widget-desc a:focus {
-  background-color: #ff084e;
+  background-color: #009DE4;
   color: #fff;
 }
 
@@ -1395,7 +1395,7 @@ img {
 }
 
 .widget.color .widget-desc ul li.red a {
-  background-color: #fd4f4f;
+  background-color: #009DE4;
 }
 
 .widget.color .widget-desc ul li.yellow a {
@@ -1418,7 +1418,7 @@ img {
   width: calc(100% + 6px);
   height: calc(100% + 6px);
   display: block;
-  border: 2px solid #ff084e;
+  border: 2px solid #009DE4;
   position: absolute;
   z-index: -1;
   top: -3px;
@@ -1577,8 +1577,8 @@ img {
 
 .single_product_desc .widget.size .widget-desc a:hover,
 .single_product_desc .widget.size .widget-desc a:focus {
-  border: 2px solid #ff084e;
-  background-color: #ff084e;
+  border: 2px solid ##009DE4;
+  background-color: ##009DE4;
 }
 
 .single_product_desc .widget.size {

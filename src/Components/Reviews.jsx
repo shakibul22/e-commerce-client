@@ -96,7 +96,7 @@ export const Reviews = () => {
               <div className="pb-1 mb-6">
                 <div className="flex items-center mb-3">
                   <div className="flex mr-2 text-xs text-black dark:text-gray-400">
-                    <span className="mr-1">4</span> 
+                    <span className="mr-1">4</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -112,12 +112,12 @@ export const Reviews = () => {
                     <div className="h-3 bg-blue-500 dark:bg-blue-400 w-3/4"></div>
                   </div>
                   <div className="flex justify-end text-xs font-medium dark:text-gray-400">
-                    91% 
+                    91%
                   </div>
                 </div>
                 <div className="flex items-center mb-3">
                   <div className="flex mr-2 text-xs text-black dark:text-gray-400">
-                    <span className="mr-1">3</span> 
+                    <span className="mr-1">3</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -133,12 +133,12 @@ export const Reviews = () => {
                     <div className="h-3 bg-blue-500 dark:bg-blue-400 w-45"></div>
                   </div>
                   <div className="flex justify-end text-xs font-medium dark:text-gray-400">
-                    45% 
+                    45%
                   </div>
                 </div>
                 <div className="flex items-center mb-3">
                   <div className="flex mr-2 text-xs text-black dark:text-gray-400">
-                    <span className="mr-1">2</span> 
+                    <span className="mr-1">2</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -154,12 +154,12 @@ export const Reviews = () => {
                     <div className="h-3 bg-blue-500 dark:bg-blue-400 w-1/4"></div>
                   </div>
                   <div className="flex justify-end text-xs font-medium dark:text-gray-400">
-                    25% 
+                    25%
                   </div>
                 </div>
                 <div className="flex items-center ">
                   <div className="flex mr-2 text-xs text-black dark:text-gray-400">
-                    <span className="mr-1">1</span> 
+                    <span className="mr-1">1</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -175,14 +175,14 @@ export const Reviews = () => {
                     <div className="h-3 bg-blue-500 dark:bg-blue-400 w-14"></div>
                   </div>
                   <div className="flex justify-end text-xs font-medium dark:text-gray-400">
-                    14% 
+                    14%
                   </div>
                 </div>
               </div>
               <div className="items-center ">
                 <a
                   href="#"
-                  className="px-4 py-2 text-xs text-gray-100 bg-blue-500 hover:bg-blue-600 "
+                  className="px-4 py-2 text-xs text-gray-100 bg-btnbg hover:bg-blue-500 rounded "
                 >
                   View all reviews
                 </a>
@@ -208,7 +208,7 @@ export const Reviews = () => {
                   ></textarea>
                 </div>
                 <div className="">
-                  <button className="px-4 py-2 text-xs font-medium text-gray-100 bg-blue-500 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-700">
+                  <button className=" rounded px-4 py-2 text-xs font-medium text-gray-100 bg-btnbg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-700">
                     Submit comment
                   </button>
                 </div>
@@ -218,7 +218,7 @@ export const Reviews = () => {
           <div className="p-6 dark:bg-gray-900 bg-gray-50">
             <div className="flex flex-wrap items-center mb-4 space-x-2">
               <div className="flex self-start flex-shrink-0 cursor-pointer">
-              <CgProfile className="w-10 h-10"  />
+                <CgProfile className="w-10 h-10" />
               </div>
               <div className="flex items-center justify-center space-x-2 ">
                 <div className="block">
@@ -239,14 +239,6 @@ export const Reviews = () => {
                   <div className="flex items-center justify-start w-full text-xs">
                     <div className="flex items-center justify-center px-2 space-x-1 font-semibold text-gray-700 dark:text-gray-400">
                       <a href="#" className="hover:underline">
-                        <span>Like</span>
-                      </a>
-                      <span className="self-center">.</span>
-                      <a href="#" className="hover:underline">
-                        <span>Reply</span>
-                      </a>
-                      <span className="self-center">.</span>
-                      <a href="#" className="hover:underline">
                         <span>10m ago</span>
                       </a>
                     </div>
@@ -256,7 +248,7 @@ export const Reviews = () => {
             </div>
             <div className="flex flex-wrap items-center mb-4 space-x-2">
               <div className="flex self-start flex-shrink-0 cursor-pointer">
-              <CgProfile className="w-10 h-10"  />
+                <CgProfile className="w-10 h-10" />
               </div>
               <div className="flex items-center justify-center space-x-2 ">
                 <div className="block">
@@ -277,14 +269,6 @@ export const Reviews = () => {
                   <div className="flex items-center justify-start w-full text-xs">
                     <div className="flex items-center justify-center px-2 space-x-1 font-semibold text-gray-700 dark:text-gray-400">
                       <a href="#" className="hover:underline">
-                        <span>Like</span>
-                      </a>
-                      <span className="self-center">.</span>
-                      <a href="#" className="hover:underline">
-                        <span>Reply</span>
-                      </a>
-                      <span className="self-center">.</span>
-                      <a href="#" className="hover:underline">
                         <span>10m ago</span>
                       </a>
                     </div>
@@ -294,7 +278,7 @@ export const Reviews = () => {
             </div>
             <div className="flex flex-wrap items-center space-x-2">
               <div className="flex self-start flex-shrink-0 cursor-pointer">
-              <CgProfile className="w-10 h-10"  />
+                <CgProfile className="w-10 h-10" />
               </div>
               <div className="flex items-center justify-center space-x-2 ">
                 <div className="block">
@@ -314,14 +298,6 @@ export const Reviews = () => {
                   </div>
                   <div className="flex items-center justify-start w-full text-xs">
                     <div className="flex items-center justify-center px-2 space-x-1 font-semibold text-gray-700 dark:text-gray-400">
-                      <a href="#" className="hover:underline">
-                        <span>Like</span>
-                      </a>
-                      <span className="self-center">.</span>
-                      <a href="#" className="hover:underline">
-                        <span>Reply</span>
-                      </a>
-                      <span className="self-center">.</span>
                       <a href="#" className="hover:underline">
                         <span>10m ago</span>
                       </a>
