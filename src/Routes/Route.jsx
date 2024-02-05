@@ -7,6 +7,8 @@ import Cart from "../Pages/Cart";
 import CheckOut from "../Pages/CheckOut";
 import ProductDetails from "../Pages/ProductDetails";
 import Shop from "../Pages/Shop";
+import Login from "../Pages/Login";
+import Otp from "../Pages/Otp";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +35,15 @@ export const router = createBrowserRouter([
        path:"/shop" ,
        element:<Shop/>
       },
+      {
+        path :"/login",
+        element : <Login/>
+      },
+
+      {
+        path :"/otp",
+        element : <Otp/>
+      }
     ]
   },
 ]);

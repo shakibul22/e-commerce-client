@@ -7,10 +7,13 @@ import Banner from "../../Components/Banner";
 import FlashSale from "../../Components/FlashSale";
 import FeaturedProducts from "../../Components/FeaturedProducts";
 import PopularProducts from "../../Components/PopularProducts";
+import PopupModal from "../../Components/PopupModal";
 
 function Home() {
+
   return (
     <div>
+      <PopupModal />
       <Banner />
       <TopCategory   />
       <NewArrivals />
@@ -18,6 +21,9 @@ function Home() {
       <FeaturedProducts/>
       <PopularProducts/>
       <Discount />
+   
+    
+
       <Testimonials />
     </div>
   );
