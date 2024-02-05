@@ -11,6 +11,7 @@ import Login from "../Pages/Login";
 import Otp from "../Pages/Otp";
 import OrderTracker from "../Components/OrderTracker";
 import Signup from "../Components/Signup";
+import FlashSalePage from "../Pages/FlashSalePage";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path :"/signup",
         element : <Signup/>
+      },
+      {
+        path :"/flashSalePage",
+        element : <FlashSalePage/>
       },
 
       {
