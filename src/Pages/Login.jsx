@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -18,21 +19,51 @@ const Login = () => {
     setDetails({ ...details, [e.target.name]: e.target.value });
   };
 
-  //  console.log("details",details);
+  console.log("details", details);
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      Swal.fire({
-        title: "Log in Successfull",       
-        icon: "success"
+      const res = await axios.post("http://localhost:4000/api/login", {
+        email: details.email,
+        password: details.password,
       });
+
+      console.log("login ", res);
+
+      if (res.status === 200) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Login successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
     } catch (error) {
-      console.log(error);
-      Swal.fire({
-        title: "Log in Failed",       
-        icon: "error"
-      });
+      console.log(
+        error.response.data.message ==
+          "Email is not varified, please verify email"
+      );
+      if (
+        error.response.data.message ==
+        "Email is not varified, please verify email"
+      ) {
+        Swal.fire({
+          title: "Log in Failed",
+          text: error.response.data.message,
+          icon: "error",
+          footer: '<a href="/otp">Verify your Email</a>',
+        });
+      } else {
+        Swal.fire({
+          title: "Log in Failed",
+          text: error.response.data.message,
+          icon: "error",
+        });
+      }
+
+      console.log("error", error);
     }
   };
 
@@ -67,12 +98,13 @@ const Login = () => {
                   </span>
                 </a>
                 <div className="text-center pt-3">Or</div>
-                <form action="" className="mt-6">
+                <form className="mt-6">
                   <div>
                     <input
                       name="email"
                       onChange={handleChange}
                       type="email"
+                      value={details.email}
                       className="w-full px-4 py-4 mt-2 text-sm placeholder-blue-400 rounded-xl dark:text-gray-400 lg:text-base bg-blue-50 dark:placeholder-gray-400 dark:bg-gray-900 dark:border dark:border-gray-800"
                       placeholder="Enter your email"
                       required
