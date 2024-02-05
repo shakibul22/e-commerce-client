@@ -90,24 +90,24 @@ function ProductDetails() {
 
                 <div className="widget size mb-5 lg:mb-50">
                   <h6 className="widget-title mb-2">Size</h6>
-                  <div className="widget-desc">
+                  <div className="widget-desc ">
                     <ul>
-                      <li>
+                      <li className="mx-1 lg:mx-2">
                         <a href="#">32</a>
                       </li>
-                      <li>
+                      <li className="mx-1 lg:mx-2">
                         <a href="#">34</a>
                       </li>
-                      <li>
+                      <li className="mx-1 lg:mx-2">
                         <a href="#">36</a>
                       </li>
-                      <li>
+                      <li className="mx-1 lg:mx-2">
                         <a href="#">38</a>
                       </li>
-                      <li>
+                      <li className="mx-1 lg:mx-2">
                         <a href="#">40</a>
                       </li>
-                      <li>
+                      <li className="mx-1 lg:mx-2">
                         <a href="#">42</a>
                       </li>
                     </ul>
@@ -118,72 +118,43 @@ function ProductDetails() {
                   className="cart clearfix mb-5 lg:mb-50 d-flex"
                   method="post"
                 >
-                  <div className="quantity">
-                    <span
-                      className="qty-minus"
-                      onClick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;"
+                  <div className="flex items-center">
+                    <button
+                      className="bg-btnbg text-white px-4 py-2 mx-1 lg:mx-2 rounded-l"
+                      onClick="updateQuantity(-1)"
                     >
-                      {" "}
-                      <AiOutlineMinus />{" "}
-                    </span>
+                      <AiOutlineMinus />
+                    </button>
                     <input
                       type="number"
-                      className="qty-text"
+                      className="border px-4 py-1 text-center rounded"
                       id="qty"
                       step="1"
                       min="1"
                       max="12"
                       name="quantity"
                       value="1"
+                      readOnly
                     />
-                    <span
-                      className="qty-plus"
-                      onClick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"
+                    <button
+                      className="bg-btnbg text-white px-4 py-2 mx-1 lg:mx-2 rounded-r "
+                      onClick="updateQuantity(1)"
                     >
-                      {" "}
-                      <AiOutlinePlus />{" "}
-                    </span>
+                      <AiOutlinePlus />
+                    </button>
                   </div>
+
                   <button
                     type="submit"
                     name="addtocart"
                     value="5"
-                    className="btn cart-submit d-block"
+                    className="bg-btnbg px-3 py-2 mt-2 rounded-sm text-white ml-9 lg:ml-14"
                   >
                     Add to cart
                   </button>
                 </form>
 
-                <div id="accordion" role="tablist">
-                  <div className="card">
-                    <div className="card-header" role="tab" id="headingOne">
-                      <h6 className="mb-0">
-                        <a
-                          data-toggle="collapse"
-                          href="#collapseOne"
-                          aria-expanded="true"
-                          aria-controls="collapseOne"
-                        >
-                          Information
-                        </a>
-                      </h6>
-                    </div>
-
-                    <div
-                      id="collapseOne"
-                      className="collapse show"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"
-                      data-parent="#accordion"
-                    >
-                      <div className="card-body">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Proin pharetra tempor so dales. Phasellus
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                <div>
                   <div className="card">
                     <div className="card-header" role="tab" id="headingTwo">
                       <h6 className="mb-0">
@@ -205,7 +176,7 @@ function ProductDetails() {
                       aria-labelledby="headingTwo"
                       data-parent="#accordion"
                     >
-                      <div className="card-body">
+                      <div className="card-body text-justify">
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Explicabo quis in veritatis officia inventore,
@@ -213,40 +184,6 @@ function ProductDetails() {
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Officia magnam laborum eaque.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card">
-                    <div className="card-header" role="tab" id="headingThree">
-                      <h6 className="mb-0">
-                        <a
-                          className="collapsed"
-                          data-toggle="collapse"
-                          href="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          shipping &amp; Returns
-                        </a>
-                      </h6>
-                    </div>
-                    <div
-                      id="collapseThree"
-                      className="collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingThree"
-                      data-parent="#accordion"
-                    >
-                      <div className="card-body">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit. Esse quo sint repudiandae suscipit ab soluta
-                          delectus voluptate, vero vitae, tempore maxime rerum
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit. Beatae qui maxime consequatur laudantium
                         </p>
                       </div>
                     </div>
