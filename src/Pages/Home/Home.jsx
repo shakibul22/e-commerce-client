@@ -8,6 +8,7 @@ import FlashSale from "../../Components/FlashSale";
 import FeaturedProducts from "../../Components/FeaturedProducts";
 import PopularProducts from "../../Components/PopularProducts";
 import PopupModal from "../../Components/PopupModal";
+import OrderTracker from "../../Components/OrderTracker";
 
 function Home() {
   return (
