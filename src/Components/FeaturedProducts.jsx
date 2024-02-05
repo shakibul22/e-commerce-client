@@ -55,11 +55,13 @@ const FeaturedProducts = () => {
     },
   ];
   const settings = {
-    className: "center",
+    className: "center ",
     infinite: true,
     centerPadding: "30px",
     slidesToShow: 3, // Default number of cards to show on larger screens
     swipeToSlide: true,
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, 
     afterChange: function (index) {
       console.log(`Slider Changed to: ${index + 1}`);
     },
@@ -69,6 +71,7 @@ const FeaturedProducts = () => {
         settings: {
           slidesToShow: 2, // Show only 1 card on small screens (e.g., mobile)
           slidesToScroll: 2, // Scroll 2 cards at a time on small screens
+          arrows: false,
         },
       },
       {
@@ -76,6 +79,7 @@ const FeaturedProducts = () => {
         settings: {
           slidesToShow: 2, // Adjust for smaller screens like tablets
           slidesToScroll: 2, // Scroll 3 cards at a time on medium screens
+          arrows: false,
         },
       },
       {
@@ -98,13 +102,13 @@ const FeaturedProducts = () => {
       <div>
   <Slider {...settings}>
     {products.map((product) => (
-      <div key={product.id} className="relative gap-8 rounded-md">
+      <div key={product.id} className="relative h-[65vh]  rounded-md">
         <div className="flex justify-between absolute top-2 left-0 z-10 right-0 lg:right-12 p-1 lg:p-3">
           <p className="bg-red-600 text-white rounded px-3 lg:px-5 left-0 py-1">-10%</p>
           <FaRegHeart className="cursor-pointer text-white text-2xl" />
         </div>
 
-        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full max-w-sm  overflow-hidden  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <Link to="/productDetails">
             <div className="relative group">
             <img
@@ -117,7 +121,7 @@ const FeaturedProducts = () => {
           </Link>
                 <div className="px-2 pb-5">
                   <a href="#">
-                    <h5 className="text-lg lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                    <h5 className="h-10 overflow-hidden lg:text-xl font-semibold tracking-tight text-sm text-gray-900 dark:text-white">
                       {product.name}
                     </h5>
                   </a>
@@ -175,11 +179,11 @@ const FeaturedProducts = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-xl lg:text-3xl font-bold text-gray-900 dark:text-white">
-                      ${product.price}
+                    ৳{product.price}
                     </span>
                     <a
                       href="#"
-                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg btn-sm lg:btn text-sm px-2 lg:px-5 py-1 lg:py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      className="text-white bg-[#009DE4] hover:bg-[#009DE4] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg btn-sm lg:btn text-sm px-2 lg:px-5 py-1 lg:py-2.5 text-center dark:bg-blue-600 dark:hover:bg-[#009DE4] dark:focus:ring-[#009DE4]"
                     >
                       Add to cart
                     </a>

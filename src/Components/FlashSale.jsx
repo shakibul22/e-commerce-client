@@ -115,6 +115,7 @@ function FlashSale() {
             slidesPerView={3}
             spaceBetween={10}
             navigation
+            
             breakpoints={{
               320: {
                 slidesPerView: 2,
@@ -147,7 +148,7 @@ function FlashSale() {
                       className="mb-2 rounded-md w-full h-40  lg:h-[400px] object-cover"
                     />
                     <h3 className="text-lg font-bold mb-2">{product.name}</h3>
-                    <p className="text-gray-600">Price: ${product.price}</p>
+                    <p className="text-gray-600">Price: ৳{product.price}</p>
                     <p className="text-gray-600">Discount: {product.discount}%</p>
                     <p className="text-gray-600">Stock: {product.stock}</p>
                     <p className="text-gray-600">Brand: {product.brand}</p>
