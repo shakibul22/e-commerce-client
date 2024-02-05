@@ -17,7 +17,6 @@ function Home() {
       <Banner />
       <TopCategory   />
       <NewArrivals />
-      <BestSellingProduct />
       <FlashSale/>
       <FeaturedProducts/>
       <PopularProducts/>

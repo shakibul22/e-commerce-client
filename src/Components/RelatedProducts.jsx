@@ -13,6 +13,7 @@ function RelatedProducts() {
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 3500,
+    arrows:false
   };
 
   const products = [

@@ -2,7 +2,7 @@
 
 export default function Cart() {
   return (
-    <div className="cart_area px-2 lg:px-[420px] my-14">
+    <div className="px-2 md:px-[20px] lg:px-[220px] xl:px-[220px] 2xl:px-[420px] py-6 lg:py-32">
 
         <div className="row">
             <div className="col-12">

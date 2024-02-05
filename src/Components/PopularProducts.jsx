@@ -47,13 +47,15 @@ const PopularProducts = () => {
       rating: 4.5,
       price: 15,
     },
-    // Add more products as needed
+   
   ];
   const settings = {
     className: "center",
     infinite: true,
     centerPadding: "30px",
-    slidesToShow: 4, // Default number of cards to show on larger screens
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, 
+    slidesToShow: 3, // Default number of cards to show on larger screens
     swipeToSlide: true,
     afterChange: function (index) {
       console.log(`Slider Changed to: ${index + 1}`);
@@ -86,7 +88,7 @@ const PopularProducts = () => {
   };
 
   return (
-    <div className="w-full lg:max-w-7xl mx-auto">
+    <div className="w-full lg:max-w-7xl mx-auto px-2">
       <div className="flex flex-row justify-between mb-3">
         <h2>Propular Products</h2>
         <button>Show All</button>
@@ -95,7 +97,7 @@ const PopularProducts = () => {
         <Slider {...settings}>
           {products.map((product) => (
             
-                  <div key={product.id}  className="max-w-sm w-full sm:w-1/2 lg:w-1/3 py-6 px-3">
+                  <div key={product.id}  className="max-w-sm w-full sm:w-1/2 lg:w-1/3 py-6 px-1">
             <div className="bg-white shadow-xl rounded-lg overflow-hidden">
               <div className="bg-cover bg-center h-[200px] lg:h-[350px]  p-4" style={{ backgroundImage: `url(${product.image})` }}>
                 <div className="flex justify-end">
@@ -104,19 +106,19 @@ const PopularProducts = () => {
                   </svg>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="uppercase tracking-wide text-sm font-bold text-gray-700">{product.name}</p>
-                <p className="text-3xl text-gray-900">${product.price}</p>
-                <p className="text-gray-700">742 Evergreen Terrace</p>
+              <div className="p-2">
+                <p className="uppercase tracking-wide sm:t  text-xs lg:text-lg w-[100%] h-20 mb-1 overflow-hidden font-bold text-gray-700">{product.name}</p>
+                <p className="text-3xl text-gray-900">৳{product.price}</p>
+                <p className="text-gray-700 text-md">742 Stock</p>
               </div>
               <div className="flex p-4 border-t border-gray-300 text-gray-700">
                 <div className="flex-1 inline-flex items-center">
                  
-                  <p><span className="text-gray-900 font-bold"></span> Checkout</p>
+                  <p  className="overflow-hidden text-xs lg:text-lg"><span className="text-gray-900 text-xs font-bold overflow-hidden"></span> Checkout</p>
                 </div>
                 <div className="flex-1 inline-flex items-center">
               
-                  <p><span className="text-gray-900 font-bold"></span> Add To Cart</p>
+                  <p className="overflow-hidden text-xs lg:text-lg"><span className="text-gray-900 font-bold "></span> Add To Cart</p>
                 </div>
               </div>
            
