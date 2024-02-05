@@ -10,20 +10,16 @@ import PopularProducts from "../../Components/PopularProducts";
 import PopupModal from "../../Components/PopupModal";
 
 function Home() {
-
   return (
     <div>
       <PopupModal />
       <Banner />
-      <TopCategory   />
+      <TopCategory />
       <NewArrivals />
-      <BestSellingProduct />
-      <FlashSale/>
-      <FeaturedProducts/>
-      <PopularProducts/>
+      <FlashSale />
+      <FeaturedProducts />
+      <PopularProducts />
       <Discount />
-   
-    
 
       <Testimonials />
     </div>
